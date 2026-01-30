@@ -1,0 +1,71 @@
+.hero {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  font-family: "Playfair Display", serif;
+}
+
+/* LEFT SIDE */
+.hero-left {
+  background-color: #7b2c1a;
+  color: white;
+  padding: 2rem;
+  position: relative;
+}
+
+/* Hamburger */
+.hamburger span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background: white;
+  margin-bottom: 6px;
+}
+
+/* Tagline */
+.tagline {
+  position: absolute;
+  bottom: 3rem;
+  left: 2rem;
+  font-size: 1.4rem;
+  line-height: 1.4;
+}
+
+/* RIGHT SIDE */
+.hero-right {
+  background-image: url("/food.jpg"); /* put image in public/ */
+  background-size: cover;
+  background-position: center;
+}
+
+/* CENTER TEXT */
+.hero-center {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+}
+
+.hero-center h1 {
+  font-size: clamp(4rem, 8vw, 9rem);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.hero-center span {
+  display: block;
+  text-align: center;
+  font-size: 3rem;
+  margin: 1rem 0;
+}
+
+/* TOP RIGHT TITLE */
+.hero-title {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 1.8rem;
+  color: #7b2c1a;
+}
