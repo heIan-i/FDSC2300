@@ -34,7 +34,7 @@
 
 /* RIGHT SIDE */
 .hero-right {
-  background-image: url("/food.jpg"); /* put image in public/ */
+  background-image: url("/images/Food-Color-Palettes-19-1536x1536.jpg"); /* put image in public/ */
   background-size: cover;
   background-position: center;
 }
