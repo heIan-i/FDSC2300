@@ -10,5 +10,5 @@ export default defineConfig({
       },
     }),
   ],
-  base: '/FDSC2300'
+  base: '/FDSC2300/'
 })

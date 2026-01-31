@@ -9,7 +9,7 @@
 /* LEFT SIDE */
 .hero-left {
   background-color: #7b2c1a;
-  color: white;
+  color: whitesmoke;
   padding: 2rem;
   position: relative;
 }
@@ -34,7 +34,7 @@
 
 /* RIGHT SIDE */
 .hero-right {
-  background-image: url("/images/Food-Color-Palettes-19-1536x1536.jpg"); /* put image in public/ */
+  background-image: url("/images/homepage.png"); /* put image in public/ */
   background-size: cover;
   background-position: center;
 }
