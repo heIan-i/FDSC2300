@@ -57,6 +57,10 @@ body {
   font-weight: 600;
   font-style: italic;
   letter-spacing: 0.1em;
+
+  background: linear-gradient(to right, #ffffff 50%, #85200cff  50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero-center span {
