@@ -85,15 +85,39 @@ body {
 
 /*Side menu*/
 /* Overlay */
-.overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.5);
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.3s ease;
-  z-index: 998;
+/* Hamburger container */
+.hamburger {
+  width: 2.5rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin: 1rem;
+  z-index: 1000;
 }
+
+/* The lines */
+.hamburger span {
+  height: 3px;
+  width: 100%;
+  background-color: whitesmoke;
+  display: block;
+  transition: 0.3s ease;
+}
+
+
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
 
 .overlay.active {
   opacity: 1;
@@ -107,7 +131,7 @@ body {
   left: -260px;
   width: 260px;
   height: 100%;
-  background: white;
+  background: #660000ff;
   padding: 2rem;
   transition: left 0.3s ease;
   z-index: 999;
