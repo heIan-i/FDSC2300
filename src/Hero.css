@@ -53,8 +53,9 @@ body {
 }
 
 .hero-center h1 {
-  font-size: clamp(4rem, 8vw, 9rem);
+  font-size: clamp(6rem, 12vw, 9rem);
   font-weight: 600;
+  font-style: italic;
   letter-spacing: 0.1em;
 }
 
