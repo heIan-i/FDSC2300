@@ -53,7 +53,7 @@ body {
 }
 
 .hero-center h1 {
-  font-size: clamp(6rem, 12vw, 9rem);
+  font-size: clamp(6rem, 15vw, 12rem);
   font-weight: 800;
   font-style: italic;
   font-style: bold;
