@@ -1,14 +1,48 @@
 import "./Hero.css";
+import React, {useState, useEffect} from "react";
 
 export default function Hero() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const openMenu = () => setIsOpen(true);
+  const closeMenu = () => setIsOpen(false);
+
+  // Close on ESC
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") closeMenu();
+    };
+
+    if (isOpen) {
+      document.addEventListener("keydown", handleKeyDown);
+    }
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isOpen]);
+
   return (
     <section className="hero">
+      {/* Overlay */}
+      <div
+        className={`overlay ${isOpen ? "active" : ""}`}
+        onClick={closeMenu}
+      />
+
+      {/* Side Menu */}
+      <nav className={`side-menu ${isOpen ? "active" : ""}`}>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      
       {/* Left panel */}
       <div className="hero-left">
         <div className="hamburger">
-          <span />
-          <span />
-          <span />
+          
         </div>
 
         <p className="tagline">

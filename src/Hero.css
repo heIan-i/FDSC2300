@@ -20,11 +20,8 @@ body {
 
 /* Hamburger */
 .hamburger span {
-  display: block;
-  width: 35px;
-  height: 5.5px;
-  background: white;
-  margin-bottom: 6px;
+  width: 2.5rem;
+  height: auto; 
 }
 
 /* Tagline */
@@ -84,4 +81,38 @@ body {
   right: 1rem;
   font-size: 2.5rem;
   color: #85200cff;
+}
+
+/*Side menu*/
+/* Overlay */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease;
+  z-index: 998;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Side menu */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -260px;
+  width: 260px;
+  height: 100%;
+  background: white;
+  padding: 2rem;
+  transition: left 0.3s ease;
+  z-index: 999;
+}
+
+.side-menu.active {
+  left: 0;
 }
