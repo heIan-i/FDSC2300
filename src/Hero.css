@@ -68,8 +68,8 @@ body {
 /* TOP RIGHT TITLE */
 .hero-title {
   position: absolute;
-  top: 2rem;
+  top: 1rem;
   right: 1rem;
-  font-size: 4rem;
+  font-size: 3rem;
   color: #85200cff;
 }
