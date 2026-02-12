@@ -21,7 +21,7 @@ body {
 /* Hamburger */
 .hamburger span {
   display: block;
-  width: 50px;
+  width: 40px;
   height: 5.5px;
   background: white;
   margin-bottom: 6px;
@@ -32,7 +32,7 @@ body {
   position: absolute;
   bottom: 3rem;
   left: 2rem;
-  font-size: 1.4rem;
+  font-size: 2rem;
   line-height: 1.4;
 }
 
@@ -48,7 +48,7 @@ body {
   position: absolute;
   inset: 0;
   display: grid;
-  place-items: center;
+  top: 30vw;
   pointer-events: none;
 }
 
