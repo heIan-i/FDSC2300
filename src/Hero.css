@@ -56,7 +56,9 @@ body {
   font-size: clamp(6rem, 12vw, 9rem);
   font-weight: 600;
   font-style: italic;
+  font-style: bold;
   letter-spacing: 0.1em;
+  text-align: center;
 
   color: white;
   mix-blend-mode: difference;
