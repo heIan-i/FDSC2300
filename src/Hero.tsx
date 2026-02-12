@@ -22,6 +22,10 @@ export default function Hero() {
     };
   }, [isOpen]);
 
+  useEffect(() => {
+  document.body.style.overflow = isOpen ? "hidden" : "auto";
+}, [isOpen]);
+
   return (
     <section className="hero">
       {/* Overlay */}
