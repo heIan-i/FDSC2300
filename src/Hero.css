@@ -54,14 +54,19 @@ body {
 
 .hero-center h1 {
   font-size: clamp(6rem, 12vw, 9rem);
-  font-weight: 600;
+  font-weight: 800;
   font-style: italic;
   font-style: bold;
   letter-spacing: 0.1em;
   text-align: center;
 
+  /*
   color: white;
   mix-blend-mode: difference;
+  */
+  background: linear-gradient(to right, #ffffff 50%, #85200cff 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero-center span {
