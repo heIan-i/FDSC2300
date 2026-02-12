@@ -12,9 +12,9 @@ body {
 
 /* LEFT SIDE */
 .hero-left {
-  background-color: #7b2c1a;
+  background-color: #85200cff;
   color: whitesmoke;
-  padding: 2rem;
+  padding: 1rem;
   position: relative;
 }
 
@@ -68,8 +68,8 @@ body {
 /* TOP RIGHT TITLE */
 .hero-title {
   position: absolute;
-  top: 2rem;
-  right: 2rem;
-  font-size: 1.8rem;
-  color: #7b2c1a;
+  top: 1rem;
+  right: 1rem;
+  font-size: 3rem;
+  color: #85200cff;
 }
