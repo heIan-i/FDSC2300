@@ -38,12 +38,15 @@ export default function Hero() {
           <li><a href="#">Contact</a></li>
         </ul>
       </nav>
-      
+
       {/* Left panel */}
       <div className="hero-left">
-        <div className="hamburger">
-          
-        </div>
+        {/* <-- Hamburger Button --> */}
+        <button className={`hamburger ${isOpen ? "open" : ""}`} onClick={isOpen ? closeMenu : openMenu}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
         <p className="tagline">
           the art at the intersection of<br />
