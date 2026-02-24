@@ -1,5 +1,6 @@
 import "./Hero.css";
 import React, {useState, useEffect} from "react";
+import cornell from "../images/cornell_logo_simple_white.png";
 
 export default function Hero() {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,14 +35,40 @@ export default function Hero() {
         onClick={closeMenu}
       />
 
-      {/* Side Menu */}
-      <nav className={`side-menu ${isOpen ? "active" : ""}`}>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
+      {/* SLIDE MENU */}
+  <div className={`side-menu ${isOpen ? "active" : ""}`}>
+    <div className="menu-inner">
+
+      <div className="menu-left">
+        <nav className="menu-links">
+          <a>mise en place</a>
+          <a>past dishes</a>
+          <a>menu</a>
+          <a>submit</a>
+          <a>instagram</a>
+        </nav>
+
+        <div className="menu-footer">
+          <div className="school">Cornell University</div>
+          <div className="contact">contact
+          </div>
+          
+          <div className="address">
+            411 Tower Rd<br />
+            Stocking Hall<br />
+            Ithaca, NY 14853
+          </div>
+        </div>
+      </div>
+
+      <div className="menu-divider" />
+
+      {/*<div className="menu-image">
+        <img src={cornell} alt="" />
+      </div>*/}
+
+    </div>
+  </div>
 
       {/* Left panel */}
       <div className="hero-left">
@@ -53,7 +80,7 @@ export default function Hero() {
         </button>
 
         <p className="tagline">
-          the art at the intersection of<br />
+          the art at the intersection of
           science and sensory experience.
         </p>
       </div>
