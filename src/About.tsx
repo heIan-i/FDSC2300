@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import "./About.css";
+import './About.css'
 import falafel from "/images/falafel.webp";
 
 export default function About() {

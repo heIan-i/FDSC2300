@@ -1,4 +1,4 @@
-import "./Hero.css";
+import './Hero.css'
 import React, {useState, useEffect} from "react";
 import cornell from "../images/cornell_logo_simple_white.png";
 
