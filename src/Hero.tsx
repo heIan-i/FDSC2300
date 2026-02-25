@@ -97,7 +97,7 @@ export default function Hero() {
       {/* Overlay content */}
       <div className="hero-center">
         <h1>
-          FOOD <span>+</span> SCIENCE
+          CULINARY <span>+</span> SCIENCE
         </h1>
       </div>
 

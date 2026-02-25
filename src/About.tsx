@@ -53,7 +53,7 @@ useEffect(() => {
       </div>
       </div>
       <div className="about-right">
-          <h2>ABOUT</h2>
+          <h2>Introduction to Culinary SCIENCE</h2>
          <p>
           Explore the science of food and cooking through interdisciplinary lectures, culinary
 demonstrations, sensory evaluations, and hands on activities. Scientific principles underlying
