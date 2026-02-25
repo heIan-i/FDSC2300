@@ -1,17 +1,16 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import { HashRouter } from 'react-router-dom'  // 👈 add this
 import './index.css'
 import App from './App.tsx'
 import "@fontsource/playfair-display/index.css";
 import "@fontsource/playfair-display/400-italic.css";
 import "@fontsource/playfair-display/700-italic.css";
-import "@fontsource/playfair-display/900-italic.css";
-
-
-
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
+    <HashRouter>
+      <App />
+    </HashRouter>
   </StrictMode>,
 )

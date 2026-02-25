@@ -1,6 +1,7 @@
 import './Hero.css'
 import React, {useState, useEffect} from "react";
 import cornell from "../images/cornell_logo_simple_white.png";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,8 +42,8 @@ export default function Hero() {
     
     {/* Full-width links outside menu-left */}
     <nav className="menu-links">
-      <a>mise en place</a>
-      <a>past dishes</a>
+      <Link to="/miseenplace">mise en place</Link>
+      <Link to="/pastdishes">past dishes</Link>
       <a href="https://docs.google.com/spreadsheets/d/1xZactS92Ebs88LnDmC4UVdyxPEMs9yaACVzM4soJzxU/edit?usp=sharing">menu</a>
       <a href="https://forms.gle/39kmzf16GS2MeRcXA">submit</a>
       <a href="">instagram</a>
