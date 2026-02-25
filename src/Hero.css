@@ -22,19 +22,13 @@ html {
   position: relative;
 }
 
-/* Hamburger */
-.hamburger span {
-  width: 2.5rem;
-  height: auto; 
-}
-
 /* Tagline */
 .tagline {
   position: absolute;
   bottom: .5rem;
   left: 2rem;
   max-width: 75%;
-  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
   line-height: 1.2;
   color: whitesmoke;
 }
@@ -46,11 +40,12 @@ html {
   height: 2px;
   background: whitesmoke;
   margin-bottom: 12px;
+  pointer-events: none;
 }
 
 /* RIGHT SIDE */
 .hero-right {
-  background-image: url("/images/homepage.png"); /* put image in public/ */
+  background-image: url("/images/homepage.png"); 
   background-size: cover;
   background-position: center;
 }
@@ -70,6 +65,7 @@ html {
   font-style: 700;
   letter-spacing: 0.075em;
   text-align: center;
+  pointer-events: none;
 
   /*
   color: white;
@@ -94,51 +90,16 @@ html {
   right: 1rem;
   font-size: 2.5rem;
   color: #85200cff;
-}
-
-/*Side menu*/
-/* Overlay */
-/* Hamburger container */
-.hamburger {
-  width: 2.5rem;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  background-color: whitesmoke;
-  gap: 0.4rem;
-  margin: 1rem;
-  z-index: 1000;
-}
-
-/* The lines */
-.hamburger span {
-  height: 3px;
-  width: 100%;
-  background-color: whitesmoke;
-  display: block;
-  transition: 0.3s ease;
-}
-
-
-.hamburger.open span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-
-.hamburger.open span:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.open span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
+  pointer-events: none;
 }
 
 .side-menu {
   position: fixed;
   top: 0;
   left: 0;
-  width: 85vw;
+  width: 45vw;
   height: 100vh;
-  background: #660000ff;
+  background: #620000ff;
   transform: translateX(-100%);
   transition: transform 0.45s cubic-bezier(.77,0,.18,1);
   z-index: 999;
@@ -148,67 +109,120 @@ html {
   transform: translateX(0);
 }
 
+/* Stack links and footer vertically with space between */
 .menu-inner {
-  display: grid;
-  grid-template-columns: 1fr 40px 1fr;
-  height: 100%;
-}
-
-.menu-left {
-  padding: 2rem 3rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  font-family: "Playfair Display", serif;
-  color: white;
+  justify-content: space-between; /* links at top/center, footer at bottom */
+  height: 100%;
+  width: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
 }
 
 .menu-links {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
+  color: whitesmoke;
+  padding: 0rem 2rem; 
+  width: 30vw;
 }
 
 .menu-links a {
-  font-size: clamp(2.5rem, 4vw, 4rem);
+  color: whitesmoke;             
+  font-size: clamp(4vw, 5vw, 5rem);
   font-style: italic;
-  font-weight: 500;
+  font-weight: 700;
   cursor: pointer;
   transition: 0.2s ease;
 }
 
 .menu-links a:hover {
   transform: translateX(6px);
-  opacity: 0.85;
+  opacity: 1;
+  color: white;            
 }
 
+/* Footer styling */
 .menu-footer {
-  font-size: 0.9rem;
-  opacity: 0.9;
+  display: flex;
+  justify-content: space-between; /* left and right columns */
+  align-items: flex-start;        /* top-aligned */
+  padding: 2rem;
+  color: white;
+  gap: 3rem;                      /* spacing between columns */
+  pointer-events: none;
 }
 
-.menu-footer .school {
-  font-weight: 500;
-  margin-bottom: 0.5rem;
+.footer-left,
+.footer-right {
+  flex: 1;                           /* each column takes 50% of parent */
+  display: flex;
+  flex-direction: column;
 }
 
-.menu-footer .contact {
+/* Left column: image above address */
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;        /* left-aligned */
+  gap: 0.5rem;                    /* spacing between image and address */
+}
+
+.footer-left .img img{
+  width: clamp(50px, 15vw, 250px);                    /* adjust as needed */
+  height: auto;
+  display: block;
+}
+
+.footer-left .address{
+  font-size: clamp(1.25em, .5vw, 4rem);
+
+}
+
+/* Right column: contacts */
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;          /* left-aligned text */
+  gap: 0.5rem;
+}
+
+
+.footer-right .contact {
   font-style: italic;
-  margin: 1rem 0;
+  font-size: 2rem;
 }
 
-.menu-footer .address {
-  line-height: 1.4;
-  font-size: 0.8rem;
+.footer-right .list{
+  font-size: clamp(1.25rem, .5vw, 4rem);
 }
 
-.menu-image {
-  background-image: url("/images/cornell_logo_simple_white.jpg");
-  background-size: cover;
-  background-position: center;
+/* --- Responsive for small screens --- */
+@media (max-width: 768px) {
+  .menu-footer {
+    flex-direction: column;       /* stack columns vertically */
+    align-items: flex-start;      /* left-align all items */
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+
+  .footer-left,
+  .footer-right {
+    flex: unset;                  /* allow natural width */
+    width: 100%;                  /* full width */
+    align-items: flex-start;      /* left-align contents */
+  }
+
+  .footer-right {
+    margin-top: 1rem;             /* spacing below left column */
+  }
+
+  .footer-left .img img {
+    width: clamp(60px, 25vw, 150px); /* slightly smaller on mobile */
+  }
 }
-
-
 
 .overlay {
   position: fixed;
@@ -221,23 +235,69 @@ html {
 }
 
 .overlay.active {
-  opacity: 0.5;
+  opacity: 0.2;
   visibility: visible;
-}
-
-/* Side menu */
-.side-menu {
-  position: fixed;
-  top: 0;
-  left: -260px;
-  width: 260px;
-  height: 100%;
-  background: #660000ff;
-  padding: 2rem;
-  transition: left 0.3s ease;
-  z-index: 999;
 }
 
 .side-menu.active {
   left: 0;
+}
+
+.hamburger {
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 2000;
+}
+
+.hamburger span {
+  position: absolute;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+  transition: 
+    transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55),
+    top 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55),
+    opacity 0.3s ease;
+}
+
+/* Initial positions */
+.hamburger span:nth-child(1) { top: 10px; }
+.hamburger span:nth-child(2) { top: 18px; }
+.hamburger span:nth-child(3) { top: 26px; }
+
+/* Hover micro-animation (lines subtly shift horizontally) */
+.hamburger:hover span:nth-child(1) { transform: translateX(2px); }
+.hamburger:hover span:nth-child(2) { transform: translateX(-2px); }
+.hamburger:hover span:nth-child(3) { transform: translateX(1px); }
+
+/* Open state — luxury morph to X */
+.hamburger.open span:nth-child(1) {
+  top: 18px;
+  transform: rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  top: 18px;
+  transform: rotate(-45deg);
+}
+
+.hamburger {
+  outline: none;
+  border: none;
+}
+
+.hamburger:focus,
+.hamburger:active {
+  outline: none;
+  box-shadow: none;
 }

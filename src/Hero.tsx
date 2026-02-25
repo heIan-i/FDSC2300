@@ -36,39 +36,45 @@ export default function Hero() {
       />
 
       {/* SLIDE MENU */}
-  <div className={`side-menu ${isOpen ? "active" : ""}`}>
-    <div className="menu-inner">
-
-      <div className="menu-left">
-        <nav className="menu-links">
-          <a>mise en place</a>
-          <a>past dishes</a>
-          <a>menu</a>
-          <a>submit</a>
-          <a>instagram</a>
-        </nav>
-
-        <div className="menu-footer">
-          <div className="school">Cornell University</div>
-          <div className="contact">contact
-          </div>
-          
-          <div className="address">
-            411 Tower Rd<br />
-            Stocking Hall<br />
-            Ithaca, NY 14853
-          </div>
-        </div>
-      </div>
-
-      <div className="menu-divider" />
-
-      {/*<div className="menu-image">
-        <img src={cornell} alt="" />
-      </div>*/}
-
+<div className={`side-menu ${isOpen ? "active" : ""}`}>
+  <div className="menu-inner">
+    
+    {/* Full-width links outside menu-left */}
+    <nav className="menu-links">
+      <a>mise en place</a>
+      <a>past dishes</a>
+      <a href="https://docs.google.com/spreadsheets/d/1xZactS92Ebs88LnDmC4UVdyxPEMs9yaACVzM4soJzxU/edit?usp=sharing">menu</a>
+      <a href="https://forms.gle/39kmzf16GS2MeRcXA">submit</a>
+      <a href="">instagram</a>
+    </nav>
+    
+    {/* footer */}
+      <div className="menu-footer">
+  <div className="footer-left">
+    <div className="img">
+      <img src={cornell} alt="Cornell Logo" />
+    </div>
+    <div className="address">
+      411 Tower Rd<br />
+      Stocking Hall<br />
+      Ithaca, NY 14853
     </div>
   </div>
+
+  <div className="footer-right">
+    <div className="contact">contact</div>
+    <div className="list">
+      crl3@cornell.edu<br />
+      zzs2@cornell.<br />
+      my569@cornell.edu
+    </div>
+  </div>
+
+</div>
+    
+
+  </div>
+</div>
 
       {/* Left panel */}
       <div className="hero-left">
