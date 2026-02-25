@@ -1,87 +1,99 @@
-html {
-  scroll-behavior: smooth;
-}
-
-.parallax-img {
-  will-change: transform;
-  transition: transform 0.1s linear;
-}
-
+/* --- About Section --- */
 .about {
-  opacity: 1;
-  transform: none;
-}
-
-.about {
-  min-height: 100vh;
-  background: #eeeeeeff;
-  display: flex;
-  align-items: center;
-  padding: 4rem 6rem;
-}
-
-.about-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 100%;
-  align-items: center;
+  height: 100vh;
+  padding: 0 4rem;
+  background-color: #eeeeeeff;
+  align-items: stretch;
 }
-
 .about-left {
+  display: flex;
   position: relative;
-  width: 500px;
-  height: 600px;
 }
-
-.about-left img {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 2;
-}
-
-/* Dark green block */
-.green-back {
-  position: absolute;
-  left: -60px;
-  top: -40px;
-  width: 80%;
-  height: 90%;
-  background: #2f4f1f;
-  z-index: 0;
-}
-
-/* Lighter green block */
-.green-front {
-  position: absolute;
-  left: -30px;
-  top: 40px;
-  width: 70%;
-  height: 80%;
-  background: #4a7729;
-  z-index: 1;
-}
-
+/* --- Right Side Text --- */
 .about-right {
-  transition: transform 0.4s ease-out, opacity 0.6s ease;
-  will-change: transform;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  padding-left: 5rem;
+  z-index: 5;
+  max-width: 500px;
+  align-items: center;
 }
 
 .about-right h2 {
+  padding-left: 4rem;
   font-family: "Playfair Display", serif;
-  font-size: clamp(5rem, 8vw, 9rem);
   font-style: italic;
-  color: #8b1c13;
+  font-weight: 700;
+  font-size: clamp(4rem, 10vw, 8rem);
+  color: #7f2a14;
+  margin: 0;
+  text-align: right;
 }
 
-.about {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: 0.8s ease;
+.about-right p {
+  color: #560000ff;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.2rem, 1.5vw, 1.5rem);
+  line-height: 1.25;
+  text-align: right;
 }
 
-.about.visible {
-  opacity: 1;
-  transform: translateY(0);
+/* Container for layers and text */
+.about-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+  
+}
+
+/* --- Blocks --- */
+.block {
+  position: absolute;
+  border-radius: 2px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  will-change: transform;
+}
+
+/* Dark green back block */
+.block.dark-green {
+  background-color: #344d12;
+  width: clamp(100px, 30vw, 500px);
+  height: clamp(300px, 55vw, 900px);
+  top: 50px;       /* slightly down from top */
+  left: -50px;     /* offscreen to the left a bit */
+  z-index: 1;
+}
+
+/* Olive green middle block */
+.block.olive-green {
+  background-color: #58761b;
+  width: clamp(100px, 28vw, 450px);
+  height: clamp(300px, 58vw, 900px);
+  top: 100px;      /* overlaps dark block slightly lower */
+  left: 50px;      /* slightly right */
+  z-index: 2;
+}
+
+/* --- Parallax Image --- */
+.parallax-img {
+  position: absolute;
+  top: 150px;      /* slightly lower for depth */
+  left: 100px;     /* front and to the right */
+  width: clamp(100px, 35vw, 550px);
+  height: auto;
+  object-fit: cover;
+  border-radius: 2px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+  z-index: 3;
+  will-change: transform;
+  transition: transform 0.2s ease-out;
 }
