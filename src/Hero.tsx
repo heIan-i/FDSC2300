@@ -66,7 +66,7 @@ export default function Hero() {
     <div className="contact">contact</div>
     <div className="list">
       crl3@cornell.edu<br />
-      zzs2@cornell.<br />
+      zzs2@cornell.edu<br />
       my569@cornell.edu
     </div>
   </div>
